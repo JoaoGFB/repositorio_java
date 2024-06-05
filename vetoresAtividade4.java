@@ -31,12 +31,16 @@ public class vetoresAtividade4 {
         }
         System.out.println("O menor valor digitado é " + menor);
         System.out.println("O maior valor digitado é " + maior);
-        System.out.println("Digite a posição do primeiro número que quer substituir. Lembre-se a primeira posição é 0: ");
-        p1 = scanner.nextInt();
+        do {
+            System.out.println("Digite a posição do primeiro número que quer substituir. Lembre-se, a primeira posição é 0: ");
+            p1 = scanner.nextInt();
+        } while (p1 < 0 || p1 >= tamanho);
         System.out.println("Digite por qual valor deseja subsituir: ");
         n1 = scanner.nextInt();
-        System.out.println("Digite a posição do segundo número que qeur substituir. Lembre-se a primeira posição é 0: ");
-        p2 = scanner.nextInt();
+        do {
+            System.out.println("Digite a posição do segundo número que quer substituir. Lembre-se, a primeira posição é 0: ");
+            p2 = scanner.nextInt();
+        } while (p2 < 0 || p2 >= tamanho);
         System.out.println("Digite por qual valor deseja substituir: ");
         n2 = scanner.nextInt();
         vet[p1] = n1;
